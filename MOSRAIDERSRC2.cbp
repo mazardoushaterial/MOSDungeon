@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="MOSRAIDERSRC2" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/MOSRAIDERSRC2" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/MOSRAIDERSRC2" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="Fox.png" />
+		<Unit filename="MOSRAIDERSRC2.cbp" />
+		<Unit filename="MOSRAIDERSSRC.cbp" />
+		<Unit filename="MOSRAIDERSSRC.depend" />
+		<Unit filename="MOSRAIDERSSRC.layout" />
+		<Unit filename="Reuben.png" />
+		<Unit filename="Rolfie.png" />
+		<Unit filename="RolfieNEW.png" />
+		<Unit filename="RolfieOLD.png" />
+		<Unit filename="RolfieOLD2.png" />
+		<Unit filename="RolfieOLD3.png" />
+		<Unit filename="Soldier.png" />
+		<Unit filename="alps12313123.png" />
+		<Unit filename="boomerang.png" />
+		<Unit filename="bubble bobble.png" />
+		<Unit filename="creature.cpp" />
+		<Unit filename="creature.h" />
+		<Unit filename="empty.png" />
+		<Unit filename="game.cpp" />
+		<Unit filename="game.h" />
+		<Unit filename="goteamMOS.png" />
+		<Unit filename="goteamMOS2.png" />
+		<Unit filename="goteamMOS3.png" />
+		<Unit filename="hizzzzz.png" />
+		<Unit filename="hizzzzzc.png" />
+		<Unit filename="initialState.cpp" />
+		<Unit filename="initialState.h" />
+		<Unit filename="loading.png" />
+		<Unit filename="main.cpp" />
+		<Unit filename="map.cpp" />
+		<Unit filename="map.h" />
+		<Unit filename="mapTiles.png" />
+		<Unit filename="my twitter feed.png" />
+		<Unit filename="npc.h" />
+		<Unit filename="oneEyedGoatBeast.png" />
+		<Unit filename="openal32.dll" />
+		<Unit filename="player.cpp" />
+		<Unit filename="player.h" />
+		<Unit filename="projectile.cpp" />
+		<Unit filename="projectile.h" />
+		<Unit filename="resourceManager.cpp" />
+		<Unit filename="resourceManager.h" />
+		<Unit filename="sfml-audio-2.dll" />
+		<Unit filename="sfml-audio-d-2.dll" />
+		<Unit filename="sfml-graphics-2.dll" />
+		<Unit filename="sfml-graphics-d-2.dll" />
+		<Unit filename="sfml-network-2.dll" />
+		<Unit filename="sfml-network-d-2.dll" />
+		<Unit filename="sfml-system-2.dll" />
+		<Unit filename="sfml-system-d-2.dll" />
+		<Unit filename="sfml-window-2.dll" />
+		<Unit filename="sfml-window-d-2.dll" />
+		<Unit filename="starman.png" />
+		<Unit filename="starman2.png" />
+		<Unit filename="state.cpp" />
+		<Unit filename="state.h" />
+		<Unit filename="testState1.cpp" />
+		<Unit filename="testState1.h" />
+		<Unit filename="tileTextures.png" />
+		<Unit filename="weapon.cpp" />
+		<Unit filename="weapon.h" />
+		<Unit filename="weaponTextures.png" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
