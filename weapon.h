@@ -4,6 +4,8 @@
 #include <string>
 #include <iostream>
 #include <fstream>
+
+
 class Weapon
 {
     public:
@@ -20,7 +22,7 @@ class Weapon
         void setTexture(sf::Texture &rTexture);
         void setVisible(bool visible);
         void draw(sf::RenderWindow &renderWindow);
-        void resetElapsedTime();
+        void resetElapsedTime(); //OBSOLETE EXCEPT FOR ANIMATION
         bool isMelee();
         bool isThrowable();
         bool isReturnable();
@@ -50,7 +52,7 @@ class Weapon
         int x;
         int y;
         //direction vectors
-        int vecX;
+        int vecX;//
         int vecY;
         int speed;
         bool returnable;
@@ -60,7 +62,7 @@ class Weapon
         //Note: The boomerang's downtime begins after the apex of it's flight
         //Not when it's in the players' possession. Fix if you want, I don't care.
         //int facing; //URDL
-        int timeElapsed;
+        int timeElapsed; //DO NOT USE EXCEPT FOR ANIMATION!! IT IS OBSOLETE
         bool melee;
         bool throwable;
         std::string name;

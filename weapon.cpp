@@ -165,6 +165,7 @@ void Weapon::loadWeapon(std::string file)
     getMap >> spriteOffsetY;
     getMap >> speed;
 
+    /*
     std::cout << name << std::endl;
     std::cout << melee << std::endl;
     std::cout << returnable << std::endl;
@@ -173,6 +174,7 @@ void Weapon::loadWeapon(std::string file)
     std::cout << downTime << std::endl;
     std::cout << spriteOffsetY << std::endl;
     std::cout << speed << std::endl;
+    */
 
     getMap.close();
 }

@@ -9,6 +9,10 @@
 //#include "mapHandler.h"
 #include "player.h"
 
+#include <stdio.h>      /* printf, NULL */
+#include <stdlib.h>     /* srand, rand */
+#include <time.h>       /* time */
+
 class Game
 {
 public:
@@ -19,12 +23,17 @@ public:
     sf::RenderWindow renderWindow;
     int getWindowWidth();
     int getWindowHeight();
+    int randInt(int i);
+    //void resetTime();
+    //int getFramesElapsed();
+    //void increaseTimer();
     //MapHandler mapHandler;
 private:
     sf::View defaultView;
     State* state;
     const int WINDOW_WIDTH;
     const int WINDOW_HEIGHT;
+   // int timer;
 };
 
 

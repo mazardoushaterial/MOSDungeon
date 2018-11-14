@@ -75,6 +75,11 @@ int Creature::getCenterY()
     return getPositionY() + 8;
 }
 
+int Creature::getFacing()
+{
+    return facing;
+}
+
 void Creature::moveBack(int x, int y)
 {
     this->x += x;
@@ -105,8 +110,15 @@ void Creature::move(int x, int y)
     {
         facing = 2;
     }
-    this->x += x;
-    this->y += y;
+    //Incremement the X and Y, but not in the cheap way
+    for (int i = x; i != 0; i--)
+    {
+        this->x++;
+    }
+    for (int i = y; i != 0; i--)
+    {
+        this->y++;
+    }
     elapsed = clock.restart();
     elapsedAccumulated+=elapsed.asMilliseconds(); //accumulated time
     if (elapsedAccumulated > DELAY) //Stops the animated from going to fast
@@ -126,7 +138,7 @@ void Creature::move(int x, int y)
 
 void Creature::updateSprite()
 {
-    sprite.setTextureRect(sf::IntRect(16*facing,16*flip,16,16));
+    sprite.setTextureRect(sf::IntRect(16*facing,16*flip+spriteOffset*16,16,16));
     sprite.setPosition(this->x,this->y);
 }
 
@@ -134,7 +146,7 @@ void Creature::defaultSetup()
 {
     flip = 1;
     health = 1;
-    alive = true;
+    //alive = true;
     x = 16;
     y = 16;
     facing = 2; //facing down
@@ -152,4 +164,41 @@ bool Creature::isAlive()
 int Creature::getSpeed()
 {
     return speed;
+}
+
+int Creature::getGridPositionX()
+{
+    return (getCenterX()-(getCenterX()%16))/16;
+}
+int Creature::getGridPositionY()
+{
+    return (getCenterY()-(getCenterY()%16))/16;
+}
+
+void Creature::makeDead()
+{
+    health = -1;
+    sprite.setTextureRect(sf::IntRect(16*4,spriteOffset*16,16,16));
+}
+
+//Make the player stay on screen by teleporting them into the visible space
+void Creature::preventOutOfScreenErrors()
+{
+    if (getLeft() < 0)
+    {
+        setPosition(getLeft(),y);
+    }
+    if (getRight() > MAX_X*16)
+    {
+        setPosition(MAX_X*16-16,y);
+    }
+    if (getTop() < 0)
+    {
+        setPosition(x,getTop());
+    }
+    if (getBottom() > MAX_Y*16)
+    {
+        setPosition(x,MAX_Y*16-16);
+    }
+
 }

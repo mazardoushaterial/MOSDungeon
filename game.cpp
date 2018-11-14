@@ -11,6 +11,7 @@ Game::Game():
     //renderWindow.setPosition(sf::Vector2i(0,0));
     //renderWindow.setSize(sf::Vector2u(sf::VideoMode::getDesktopMode().width,sf::VideoMode::getDesktopMode().height));
     renderWindow.setSize(sf::Vector2u(WINDOW_WIDTH*3,WINDOW_HEIGHT*3));
+    srand(time(NULL));
     //renderWindow.setVerticalSyncEnabled(true);
 
     //note: the following would be ....width/2)-WINDOW_WIDTH*2/2 because of the multiple on the new
@@ -70,4 +71,9 @@ int Game::getWindowWidth()
 int Game::getWindowHeight()
 {
     return WINDOW_HEIGHT;
+}
+
+int Game::randInt(int i)
+{
+    return rand()%i;
 }

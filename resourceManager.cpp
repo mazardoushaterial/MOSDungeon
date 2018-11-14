@@ -29,4 +29,8 @@ void ResourceManager::loadTextures()
     {
         std::cout << "weaponTextures.png did not load" << std::endl;
     }
+    if (!projectileTextures.loadFromFile("images/projectile.png"))
+    {
+        std::cout << "projectile.png did not load" << std::endl;
+    }
 }

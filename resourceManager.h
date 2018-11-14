@@ -10,6 +10,7 @@ class ResourceManager//
         sf::Texture loadingSplash;
         sf::Texture tileTextures;
         sf::Texture weaponTextures;
+        sf::Texture projectileTextures;
     private:
         void loadTextures();
 };
